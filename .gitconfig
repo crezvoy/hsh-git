@@ -1,7 +1,40 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
 [user]
 	email = clement.rezvoy@gmail.com
 	name = Clément Rezvoy
+	signingkey = C4B4A444F8FE4461
 [alias]
 	st = status
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	st = status --short
+	rhh = reset --hard HEAD
+[core]
+	whitespace = trailing-space,space-before-tab
+	autocrlf = input
+	editor = emacsclient --tty
+  	trustctime = false
+	excludesfile = ~/.config/git/global_excludes
+
+[commit]
+	verbose = true
+[apply]
+	whitespace = fix
+[push]
+	default = upstream
+[diff]
+	tool = ediff
+	prompt = false
+
+[merge]
+	tool = ediff
+	prompt = true
+[mergetool.ediff]
+	cmd = emacsclient --tty
+
+[include]
+	path = ~/.config/git/local
