@@ -2,10 +2,7 @@
   :ensure t
   :config
   (evil-collection-magit-setup)
-  (general-define-key
-   :states '(normal visual insert emacs)
-   :prefix "SPC"
-   :non-normal-prefix "C-SPC"
+  (my/leader
    "g"  '(:ignore t :which-key "Git")
    "gs" '(magit-status :which-key "git status")
    "gc" '(magit-checkout :which-key "git checkout")))
